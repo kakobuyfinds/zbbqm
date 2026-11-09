@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>PinguBuy spreadsheet guide | Product links, sizing &amp; QC</title>
+  <meta name="description" content="Use this PinguBuy spreadsheet guide to verify product links, compare sizes, review QC photos and estimate your parcel cost. Browse ten CAFANS categories.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#f8f1e9">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PinguBuy spreadsheet guide | Product links, sizing &amp; QC">
+  <meta property="og:description" content="Check the listing, compare measurements and estimate the parcel cost before you order.">
+  <!--
+    Research note: Google's live first page could not be verified. This guide
+    uses accessible search results and snippets from ten distinct sites:
+    pingubuyspreadsheet.com, pingubuy.org, repsheet.net, hacoosheetlinks.com,
+    linktr.ee, pingubuyfinds.com, litbuysheetlinks.com, mickeybuys.com,
+    spreadsheet-kakobuy.com and findhaul.com.
+  -->
+  <style>
+    :root{color-scheme:light;--paper:#f8f1e9;--ink:#271b20;--muted:#5f5055;--line:#ccbcb8;--wine:#541c32;--card:#fffaf5;--gold:#ffd38c}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:inherit;text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #176e7b;outline-offset:4px}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2{font-family:Georgia,serif;line-height:1.05;letter-spacing:-.035em}
+    h1{font-size:clamp(2.75rem,8vw,6.5rem);overflow-wrap:break-word}
+    h2{font-size:clamp(1.85rem,4vw,3rem)}
+    h3{font-size:1.18rem;line-height:1.3}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    .masthead{display:flex;align-items:center;justify-content:space-between;gap:.5rem 1rem;flex-wrap:wrap;padding-block:.8rem;border-bottom:1px solid var(--line)}
+    .brand{font-weight:850;letter-spacing:.04em;text-decoration:none}
+    .brand:hover{text-decoration:underline}
+    .label{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .intro{padding-block:clamp(1.4rem,4vw,2.8rem) 1.25rem}
+    .intro .label,.section-label{color:var(--wine);margin-bottom:.55rem}
+    .intro p:last-child{max-width:65ch;margin-top:.8rem;color:var(--muted)}
+    .categories{border-block:1px solid var(--line);padding-block:.75rem}
+    .categories h2{font:800 .76rem/1.3 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.55rem}
+    .cat-list{list-style:none;margin:0;padding:0;display:flex;gap:.4rem;flex-wrap:wrap}
+    .cat-list a{display:block;min-height:44px;padding:.5rem .7rem;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:.88rem;text-decoration:none}
+    .cat-list a:hover{background:var(--wine);color:#fff;border-color:var(--wine)}
+    .feature{display:grid;grid-template-columns:1fr 1.08fr;background:var(--wine);color:#fff;margin-top:1.25rem}
+    .feature figure{background:#e6dcd5;color:var(--ink)}
+    .feature img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center}
+    figcaption{font-size:.84rem;padding:.45rem .7rem}
+    .feature-copy{align-self:center;padding:clamp(1.15rem,4vw,2.5rem)}
+    .feature-copy .label{color:var(--gold);margin-bottom:.5rem}
+    .feature-copy p:not(.label){margin-top:.75rem;color:#fff2f6;max-width:49ch}
+    .button{display:inline-block;margin-top:.9rem;padding:.55rem .8rem;background:var(--gold);color:var(--ink);font-weight:800;text-decoration:none}
+    .button:hover{text-decoration:underline}
+    .feature a:focus-visible{outline-color:var(--gold)}
+    .section{margin-block:clamp(2.1rem,5vw,4rem)}
+    .deck{margin-top:.55rem;max-width:65ch;color:var(--muted)}
+    .story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:.5rem 2rem;padding-block:1rem;border-top:1px solid var(--line)}
+    .story:first-of-type{margin-top:.9rem}
+    .story .label{display:block;color:var(--wine);margin-bottom:.28rem}
+    .story p+p{margin-top:.55rem}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin-top:1rem}
+    .gallery figure{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line)}
+    .gallery img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#fff}
+    .faq-list{max-width:52rem;margin-top:1rem;border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line);padding:.7rem 0}
+    summary{min-height:44px;padding:.45rem .25rem;font-weight:780;cursor:pointer}
+    details p{padding:.15rem .25rem .25rem 1.3rem}
+    footer{border-top:1px solid var(--line);padding-block:1.25rem 2rem}
+    footer p{color:var(--muted);margin-top:.35rem;font-size:.9rem}
+    @media(max-width:43rem){.feature,.story{grid-template-columns:1fr}.feature-copy{grid-row:1}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "name": "PinguBuy spreadsheet guide | Product links, sizing & QC",
+    "description": "Use this PinguBuy spreadsheet guide to verify product links, compare sizes, review QC photos and estimate your parcel cost. Browse ten CAFANS categories.",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a PinguBuy spreadsheet?",
+        "acceptedAnswer": {"@type": "Answer", "text": "It is a curated list of product links used to discover and compare items before ordering through a shopping agent. Open the original listing to confirm the seller, selected variant and current availability."}
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if a PinguBuy product link is broken?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Look for the original marketplace link or item ID. If you find a working listing, confirm the seller and variant before saving it. Mark the row as unverified if you cannot match it."}
+      },
+      {
+        "@type": "Question",
+        "name": "How should I compare shoe and clothing sizes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Compare measurements in centimeters with the seller's size chart. Use foot length for shoes and measure a garment you already own for chest width, sleeve length or inseam."}
+      },
+      {
+        "@type": "Question",
+        "name": "What can warehouse QC photos tell me?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Quality-control photos can help confirm the selected color, size tag and visible condition. Use them to flag mismatches or damage, and seek independent verification for authenticity."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I estimate the total cost of an international parcel?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Add the item subtotal, domestic shipping, applicable handling fees and the international shipping quote. Check the chargeable weight, currency conversion and any import charges that apply to your destination."}
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/zbbqm/">
+</head>
+<body>
+  <header class="masthead wrap">
+    <a class="brand" href="https://www.cafans.com">CAFANS.COM</a>
+    <span class="label">Shopping field notes</span>
+  </header>
+
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="label">Listing checks &amp; parcel planning</p>
+      <h1 id="page-title">PinguBuy spreadsheet</h1>
+      <p>A PinguBuy spreadsheet brings product links into one place. Use it to build a shortlist, then check each seller’s listing for the size, color and model you want. The categories below open the CAFANS catalog.</p>
+    </section>
+
+    <nav class="categories" aria-labelledby="category-title">
+      <h2 id="category-title">Browse CAFANS categories</h2>
+      <ul class="cat-list">
+        <li><a href="https://cafans.com/category-911-Shoes.html">Shoes</a></li>
+        <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a></li>
+        <li><a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a></li>
+        <li><a href="https://cafans.com/category-914-Jackets.html">Jackets</a></li>
+        <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Pants/Shorts</a></li>
+        <li><a href="https://cafans.com/category-916-Headwear.html">Headwear</a></li>
+        <li><a href="https://cafans.com/category-917-Sets.html">Sets</a></li>
+        <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a></li>
+        <li><a href="https://cafans.com/category-919-Jersey.html">Jersey</a></li>
+        <li><a href="https://cafans.com/category-920-Accessories.html">Accessories</a></li>
+      </ul>
+    </nav>
+
+    <section class="feature" aria-labelledby="feature-title">
+      <figure>
+        <img src="https://cms-cdn.thesolesupplier.co.uk/2024/03/nike-air-max-90-glacier-blue-fn6958-001-on-feet_w672_h672_pad_.jpg.webp" width="672" height="672" loading="eager" fetchpriority="high" alt="White and blue Nike Air Max 90 Glacier Blue sneakers worn with gray socks">
+        <figcaption>Nike Air Max 90 Glacier Blue · footwear reference</figcaption>
+      </figure>
+      <div class="feature-copy">
+        <p class="label">Start with one row</p>
+        <h2 id="feature-title">Check the listing behind the photo</h2>
+        <p>Two listings can use the same product photo and offer different colors or sizes. Save the original link and exact variant together so you can check both before ordering.</p>
+        <a class="button" href="https://www.cafans.com">Explore the CAFANS catalog</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="guides-title">
+      <p class="label section-label">Four short guides</p>
+      <h2 id="guides-title">From shortlist to parcel</h2>
+      <p class="deck">For each item, record the seller, variant, size in centimeters and the date you checked it. Mark anything that needs a follow-up.</p>
+
+      <article class="story">
+        <div><span class="label">01 · Sourcing</span><h3>Verify PinguBuy product links</h3></div>
+        <div>
+          <p>Keep the original Weidian product link, Taobao listing URL or 1688 item page next to any agent link. Record the marketplace item ID and seller name so you can identify the right listing if a saved link stops working.</p>
+          <p>Check live stock for the selected size and color. Save a second seller only after confirming the product model and variant. Mark old or broken product links as unverified until you can match them.</p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div><span class="label">02 · Fit</span><h3>Compare the seller’s size chart</h3></div>
+        <div>
+          <p>For a sneaker size comparison, measure both feet and check the longer foot against the seller’s foot-length chart. Ask whether a centimeter value refers to foot length or the removable insole.</p>
+          <p>Lay a garment you like flat. Compare chest width, shoulder width and sleeve length for a hoodie, or waist width and inseam for trousers. For a cap, check the head circumference and how far the closure adjusts.</p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div><span class="label">03 · Inspection</span><h3>Review PinguBuy QC photos</h3></div>
+        <div>
+          <p>If warehouse quality-control photos are available, look for a readable size tag, a full view of the item and close-ups of seams or hardware. For sneakers, ask for side and outsole photos. For a bracelet, ask for a close-up of the clasp and confirm its inner circumference.</p>
+          <p>Compare the photos with your selected variant. If you see a mismatch or visible damage, save the photo and check the return request deadline before approving shipment.</p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div><span class="label">04 · Delivery</span><h3>Compare PinguBuy shipping costs</h3></div>
+        <div>
+          <p>Use the same destination postcode when comparing international shipping quotes. Record the packed parcel dimensions and actual weight. Check how each shipping line calculates volumetric weight and whether parcel consolidation changes the chargeable weight.</p>
+          <p>Keep domestic delivery, packing fees, currency conversion and any applicable import charges separate in your estimate. Confirm the warehouse storage deadline while you wait for the last item to arrive.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="references-title">
+      <p class="label section-label">Style references</p>
+      <h2 id="references-title">Details worth a closer look</h2>
+      <p class="deck">Use these editorial images to see which details to compare across listings. Check availability separately with the seller.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/593J696U3012C001_E01?%24default_GHC%24=&amp;crop=409%2C150%2C1182%2C1354&amp;hei=2000&amp;scale=0.875&amp;wid=1850" width="1850" height="2000" loading="lazy" decoding="async" alt="White Dior Oblique crew-neck T-shirt with a tonal pattern">
+          <figcaption>Dior Oblique T-shirt · compare cut and fabric</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Gucci baseball cap in beige and brown GG-patterned canvas">
+          <figcaption>Gucci GG canvas cap · check fit and closure</figcaption>
+        </figure>
+        <figure>
+          <img src="https://my.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-neverfull-mm--M46987_PM2_Front%20view.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Brown Louis Vuitton Neverfull MM Monogram tote with light leather handles">
+          <figcaption>Louis Vuitton Neverfull MM · compare bag dimensions</figcaption>
+        </figure>
+        <figure>
+          <img src="https://sands-uae.com/cdn/shop/files/hermes-kelly-bracelet-small-model-rose-gold-front-view.webp?v=1756376682&amp;width=480" width="480" height="480" loading="lazy" decoding="async" alt="Rose-gold Hermès Kelly bracelet with a rectangular clasp">
+          <figcaption>Hermès Kelly bracelet · check clasp and circumference</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <h2 id="faq-title">PinguBuy spreadsheet FAQ</h2>
+      <div class="faq-list">
+        <details open>
+          <summary>What is a PinguBuy spreadsheet?</summary>
+          <p>It is a curated list of product links used to discover and compare items before ordering through a shopping agent. Open the original listing to confirm the seller, selected variant and current availability.</p>
+        </details>
+        <details>
+          <summary>What should I do if a PinguBuy product link is broken?</summary>
+          <p>Look for the original marketplace link or item ID. If you find a working listing, confirm the seller and variant before saving it. Mark the row as unverified if you cannot match it.</p>
+        </details>
+        <details>
+          <summary>How should I compare shoe and clothing sizes?</summary>
+          <p>Compare measurements in centimeters with the seller's size chart. Use foot length for shoes and measure a garment you already own for chest width, sleeve length or inseam.</p>
+        </details>
+        <details>
+          <summary>What can warehouse QC photos tell me?</summary>
+          <p>Quality-control photos can help confirm the selected color, size tag and visible condition. Use them to flag mismatches or damage, and seek independent verification for authenticity.</p>
+        </details>
+        <details>
+          <summary>How do I estimate the total cost of an international parcel?</summary>
+          <p>Add the item subtotal, domestic shipping, applicable handling fees and the international shipping quote. Check the chargeable weight, currency conversion and any import charges that apply to your destination.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <a class="brand" href="https://www.cafans.com">CAFANS.COM</a>
+    <p>Independent shopping guide. Brand imagery is used for editorial reference.</p>
+  </footer>
+</body>
+</html>
